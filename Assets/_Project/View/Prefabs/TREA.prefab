@@ -344,7 +344,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Hola como est\xE1n"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -484,10 +484,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 0}
   trash: {fileID: 7700878225317010636, guid: 10a1575f30616304f8c40c3908146b4e, type: 3}
-  dialogCanvas: {fileID: 0}
-  dialogAudioSource: {fileID: 0}
-  dialogCanvasGroup: {fileID: 0}
-  dialogTMP: {fileID: 0}
+  dialogCanvas: {fileID: 8473239198419675048}
+  dialogAudioSource: {fileID: 1508437250273187131}
+  dialogTMP: {fileID: 4713964484150583556}
 --- !u!82 &1508437250273187131
 AudioSource:
   m_ObjectHideFlags: 0
@@ -695,7 +694,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8473239198419675048}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0

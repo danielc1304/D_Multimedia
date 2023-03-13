@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Dialog_Test
   m_EditorClassIdentifier: 
   dialogText: Los reciduos aprovechables son blah blah blah
-  dialogAudio: {fileID: 0}
+  dialogAudio: {fileID: 8300000, guid: 1340d7fb0cd1bfb4caa3b3270cb2ea5f, type: 3}
