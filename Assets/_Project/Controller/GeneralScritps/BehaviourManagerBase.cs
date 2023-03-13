@@ -4,21 +4,14 @@ using UnityEngine;
 
 namespace DM
 {
-    public class IntroductionManager : MonoBehaviour
+    public abstract class BehaviourManagerBase : MonoBehaviour
     {
-        private DataManager dataManager;
-        private TreaManager treaManager;
+        protected DataManager dataManager;
+        protected TreaManager treaManager;
 
         private void Start()
         {
             InitializeVariables();
-            
-        }
-
-        [ContextMenu("ExecuteTestDialog")]
-        private void ExecuteTestDialog()
-        {
-            treaManager.ReproduceTreaDialog(dataManager.dialogSOTest);
         }
 
         private void InitializeVariables()

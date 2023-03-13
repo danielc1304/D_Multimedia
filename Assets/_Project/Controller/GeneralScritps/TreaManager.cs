@@ -53,17 +53,19 @@ namespace DM
 
         public void ReproduceTreaDialog(DialogSO dialogSO)
         {
+            dialogTMP.text = dialogSO.dialogText;
+
             FadeInDialogCanvas(()=> 
             {
-                dialogTMP.text = dialogSO.dialogText;
                 dialogAudioSource.clip = dialogSO.dialogAudio;
                 dialogAudioSource.Play();
-                StartCoroutine(WaitForSound(dialogSO.dialogAudio.length, ()=>FadeOutDialogCanvas()));
+                StartCoroutine(WaitForSound(dialogSO.dialogAudio.length, ()=> FadeOutDialogCanvas()));
             });
         }
 
         private void FadeOutDialogCanvas(Action onFadeCompleated = null)
         {
+            dialogTMP.DOFade(0f, 0.5f);
             dialogCanvasGroup.DOFade(0f, 0.5f).OnComplete(() =>
             {
                 onFadeCompleated();
@@ -74,6 +76,7 @@ namespace DM
         {
             dialogCanvasGroup.DOFade(1f, 1f).OnComplete(() =>
             {
+                dialogTMP.DOFade(1f, 0.5f);
                 onFadeCompleated();
             });
         }
